@@ -2,7 +2,7 @@
   "name": "music-player",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://xstnet.github.io/react-music-player",
+  "homepage": "https://xstnet.github.io/react-music-player",
   "dependencies": {
     "jplayer": "^2.9.2",
     "jquery": "^3.3.1",
