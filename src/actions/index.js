@@ -12,17 +12,13 @@ export const playPrev = () => ({
 })
 
 export const playMusic = () => ({
-	type: 'PALY_MUSIC',
+	type: 'PLAY_MUSIC',
 })
 
 export const play = () => ({
 	type: 'PALY',
 })
 
-export const toggleTodo = id => ({
-	type: 'TOGGLE_TODO',
-	id
-});
 
 export const choseMusic = id => ({
 	type: 'CHOSE_MUSIC',

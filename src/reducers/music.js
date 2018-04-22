@@ -13,7 +13,7 @@ let playMode = [
 
 const music = (state = [], action) => {
 	switch (action.type) {
-		case 'PALY_MUSIC':
+		case 'PLAY_MUSIC':
 			playMusic(state.currentMusicItem, false);
 			return {
 				...state,
