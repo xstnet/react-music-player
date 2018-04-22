@@ -24,7 +24,7 @@ export const playNext = (musicList, index, mode, callType = 'manual') => {
 		//单曲循环
 		case 'once':
 			//当手动切换下一曲时，执行顺序播放模式，当为歌曲播放完成自动切换下一曲时，仍为当前歌曲
-			index = callType === 'auto' ? index : index = (index + 1) % musicList.length;
+			index = callType === 'auto' ? index : (index + 1) % musicList.length;
 			break;
 		//随机播放
 		case 'random':
@@ -41,13 +41,11 @@ export const playNext = (musicList, index, mode, callType = 'manual') => {
 
 export const playPrev = (musicList, index, mode) => {
 	switch (mode) {
-		//单曲循环
-		case 'once':
-		//index = index; //当前歌曲，继续播放
 		//随机播放
 		case 'random':
 			index = Math.floor((Math.random() * musicList.length));
-		//默认，列表循环 cycle
+			break;
+		//默认，列表循环和单曲循环， 单曲循环时，点击上一曲，仍然按列表循环模式
 		default:
 			index = (index + musicList.length - 1) % musicList.length;
 	}
